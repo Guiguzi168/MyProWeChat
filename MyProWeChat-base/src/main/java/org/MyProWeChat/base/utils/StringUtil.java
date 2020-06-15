@@ -31,13 +31,6 @@ public class StringUtil {
     public static final String CURRENT_PATH = ".";
     public static final String TOP_PATH = "..";
 
-    public static String nullable(Object obj, String defaultValue) {
-        return isEmpty(obj) ? defaultValue : obj.toString();
-    }
-
-    public static String nullable(Object obj) {
-        return nullable(obj, "");
-    }
 
     public static boolean isBlank(Object obj) {
         return isEmptyOrBlank(obj, true);
@@ -182,69 +175,6 @@ public class StringUtil {
             return buf.toString();
         }
         return input;
-    }
-
-    public static final String escapeHTMLTags(String input) {
-        if ((input == null) || (input.length() == 0)) {
-            return input;
-        }
-        StringBuffer buf = new StringBuffer(input.length());
-        char ch = ' ';
-        for (int i = 0; i < input.length(); i++) {
-            ch = input.charAt(i);
-            if (ch == '<') {
-                buf.append("&lt;");
-            } else if (ch == '>') {
-                buf.append("&gt;");
-            } else if (ch == '"') {
-                buf.append("&quot;");
-            } else if (ch == '\'') {
-                buf.append("&apos;");
-            } else if (ch == '&') {
-                buf.append("&amp;");
-            } else if (ch == '\\') {
-                buf.append('\\');
-                buf.append(ch);
-            } else if (ch == '\r') {
-                buf.append("\\r");
-            } else if (ch == '\n') {
-                buf.append("\\n");
-            } else {
-                buf.append(ch);
-            }
-        }
-        return buf.toString();
-    }
-
-    public static final String viewHTMLTags(String input) {
-        if ((input == null) || (input.length() == 0)) {
-            return input;
-        }
-        StringBuffer buf = new StringBuffer(input.length());
-        char ch = ' ';
-        for (int i = 0; i < input.length(); i++) {
-            ch = input.charAt(i);
-            if (ch == '<') {
-                buf.append("&lt;");
-            } else if (ch == '>') {
-                buf.append("&gt;");
-            } else if (ch == '"') {
-                buf.append("&quot;");
-            } else if (ch == '\'') {
-                buf.append("&apos;");
-            } else if (ch == '&') {
-                buf.append("&amp;");
-            } else if (ch == '\\') {
-                buf.append(ch);
-            } else if (ch == '\r') {
-                buf.append("<br>");
-            } else if (ch == '\n') {
-                buf.append("");
-            } else {
-                buf.append(ch);
-            }
-        }
-        return buf.toString();
     }
 
     private static MessageDigest digest = null;
@@ -524,56 +454,6 @@ public class StringUtil {
         chars[0] = Character.toLowerCase(chars[0]);
         return new String(chars);
     }
-
-//    public static String replaceProperties(String value, Map staticProp, BeanUtil.PropertySource[] dynamicProp) {
-//        StringBuffer sb = new StringBuffer();
-//        int prev = 0;
-//        int pos;
-//        while ((pos = value.indexOf("$", prev)) >= 0) {
-//            if (pos > 0) {
-//                sb.append(value.substring(prev, pos));
-//            }
-//            if (pos == value.length() - 1) {
-//                sb.append('$');
-//                prev = pos + 1;
-//                break;
-//            }
-//            if (value.charAt(pos + 1) != '{') {
-//                sb.append('$');
-//
-//                prev = pos + 1;
-//            } else {
-//                int endName = value.indexOf('}', pos);
-//                if (endName < 0) {
-//                    sb.append(value.substring(pos));
-//                    prev = value.length();
-//                } else {
-//                    String n = value.substring(pos + 2, endName);
-//                    String v = null;
-//                    if ((n != null) && (staticProp != null) && (staticProp.get(n) != null)) {
-//                        v = staticProp.get(n).toString();
-//                    }
-//                    if ((n != null) && (v == null) && (dynamicProp != null)) {
-//                        for (int i = 0; i < dynamicProp.length; i++) {
-//                            v = dynamicProp[i].getProperty(n);
-//                            if (v != null) {
-//                                break;
-//                            }
-//                        }
-//                    }
-//                    if (v == null) {
-//                        v = "${" + n + "}";
-//                    }
-//                    sb.append(v);
-//                    prev = endName + 1;
-//                }
-//            }
-//        }
-//        if (prev < value.length()) {
-//            sb.append(value.substring(prev));
-//        }
-//        return sb.toString();
-//    }
 
     public static int getStrLenByEncoding(String str, String dbEncoding) {
         if (str == null) {
