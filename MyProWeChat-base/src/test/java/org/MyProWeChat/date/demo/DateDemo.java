@@ -3,7 +3,7 @@ package org.MyProWeChat.date.demo;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.MyProWeChat.date.util.DateUtils;
+import org.MyProWeChat.base.utils.date.DateUtils;
 
 public class DateDemo {
 

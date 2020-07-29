@@ -1,4 +1,4 @@
-package org.MyProWeChat.qrcode.util;
+package org.MyProWeChat.base.qrcode;
 
 import java.awt.BasicStroke;
 import java.awt.Graphics;
@@ -14,7 +14,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
-import org.MyProWeChat.date.util.DateUtils;
+import org.MyProWeChat.base.utils.date.DateUtils;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.BinaryBitmap;

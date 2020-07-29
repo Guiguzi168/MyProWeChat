@@ -1,4 +1,4 @@
-package org.MyProWeChat.qrcode.util;
+package org.MyProWeChat.base.qrcode;
 
 import java.awt.Graphics2D;
 import java.awt.geom.AffineTransform;

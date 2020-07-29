@@ -1,4 +1,4 @@
-package org.MyProWeChat.date.util;
+package org.MyProWeChat.base.utils.date;
 
 import java.text.DecimalFormat;
 import java.text.ParseException;

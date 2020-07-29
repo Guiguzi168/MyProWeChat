@@ -1,6 +1,7 @@
 package org.MyProWeChat.qrcode.demo;
 
-import org.MyProWeChat.qrcode.util.QRCodeUtil;
+import org.MyProWeChat.base.qrcode.QRCodeUtil;
+
 /**
  * 二维码生成测试
  * @author ShenPengL
