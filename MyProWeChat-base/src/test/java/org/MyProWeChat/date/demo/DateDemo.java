@@ -5,10 +5,11 @@ import java.util.Date;
 
 import org.MyProWeChat.base.utils.date.DateUtils;
 
+@SuppressWarnings("unused")
 public class DateDemo {
 
     public static void main(String[] args) {
-        Calendar calendar = DateUtils.getCalendar(new Date());
+//        Calendar calendar = DateUtils.getCalendar(new Date());
 //        System.out.println("将 Date 日期转化为 Calendar 类型日期." + calendar);
         //获取当前季度
         Integer currentSeason = DateUtils.getCurrentSeason();

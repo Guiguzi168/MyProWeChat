@@ -17,8 +17,9 @@ import java.util.Locale;
 
 public class Convert {
 
-    private static final String HEX_PREFIX = "0x";
-    private static final int HEX_RADIX = 16;
+//    private static final String HEX_PREFIX = "0x";
+//    private static final int HEX_RADIX = 16;
+    @SuppressWarnings("rawtypes")
     private static final Class[] CONSTR_ARGS = {String.class};
 
     public static Boolean toBoolean(Object value, Boolean defaultVal) {

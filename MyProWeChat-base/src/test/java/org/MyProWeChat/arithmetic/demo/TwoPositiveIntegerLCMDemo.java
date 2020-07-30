@@ -16,7 +16,6 @@ public class TwoPositiveIntegerLCMDemo {
      */
     @SuppressWarnings("resource")
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
         Scanner scanr = new Scanner(System.in); 
         while(scanr.hasNext()) {
             int m = scanr.nextInt();

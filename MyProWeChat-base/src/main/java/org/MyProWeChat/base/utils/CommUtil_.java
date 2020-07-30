@@ -8,14 +8,15 @@ import java.util.Map;
 
 public class CommUtil_ {
 
+    @SuppressWarnings("unchecked")
     public static Map<String, Object> toMap(Object bean) {
         if (bean == null) {
             return null;
         }
         if ((bean instanceof Map)) {
-            return (Map) bean;
+            return (Map<String, Object>) bean;
         }
-        throw new RuntimeException(String.format("", new String[] { bean.getClass().getName() }));
+        throw new RuntimeException(String.format("", bean.getClass().getName()));
     }
 
     public static String createGUID() {

@@ -8,7 +8,6 @@ package org.MyProWeChat.demo;
 public class StringReverse {
 
     public static void main(String[] args) {
-        // TODO 如何将字符串反转？
         // StringBuffer reverse
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("abcdefg");

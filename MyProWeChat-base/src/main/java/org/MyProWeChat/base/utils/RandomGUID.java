@@ -14,7 +14,9 @@ public class RandomGUID {
     private static Random myRand;
     private static SecureRandom mySecureRand = new SecureRandom();
     private static String s_id;
+    @SuppressWarnings("unused")
     private static final int PAD_BELOW = 16;
+    @SuppressWarnings("unused")
     private static final int TWO_BYTES = 255;
 
     static {

@@ -12,7 +12,6 @@ public class CallRunDemo<V> implements Callable<V> {
 
     @Override
     public V call() throws Exception {
-        // TODO Auto-generated method stub
         return null;
     }
 

@@ -22,6 +22,7 @@ public abstract class AbstractConfig {
     
     
     
+    @SuppressWarnings("unused")
     private String get(String key, String desc, boolean nullException) {
         String tmpStr = configMap.get(key);
         if(tmpStr != null && tmpStr.length() > 0) {

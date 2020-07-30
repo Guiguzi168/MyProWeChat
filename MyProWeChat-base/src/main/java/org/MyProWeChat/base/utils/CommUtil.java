@@ -111,8 +111,11 @@ public class CommUtil {
     public static enum Operator {
         add("add", "add", "加"), sub("sub", "sub", "减"), mul("mul", "mul", "乘"), div("div", "div", "除");
 
+        @SuppressWarnings("unused")
         private String id;
+        @SuppressWarnings("unused")
         private String value;
+        @SuppressWarnings("unused")
         private String longName;
 
         private Operator(String id, String value, String longName) {
